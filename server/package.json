@@ -1,0 +1,59 @@
+{
+  "name": "anyfin-backend",
+  "version": "1.0.0",
+  "description": "node js express graphql server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node .src/index.js",
+    "dev": "nodemon --exec babel-node src/index.js"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "express",
+    "websockets",
+    "graphql"
+  ],
+  "author": "Onyango Benard",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.25.1",
+    "apollo-server-express": "^2.25.1",
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.2.6",
+    "fixer-api": "^2.2.1",
+    "graphql": "^15.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.2",
+    "mongoose": "^5.12.13",
+    "rate-limit-redis": "^2.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/node": "^7.14.2",
+    "@babel/preset-env": "^7.14.4",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.1"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@models": "src/models",
+    "@middleware": "src/middleware",
+    "@schema": "src/graphql",
+    "@config": "src/config",
+    "@utils": "src/utils",
+    "@graphql": "src/graphql",
+    "@db": "src/db"
+  }
+}
