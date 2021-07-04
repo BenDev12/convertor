@@ -12,7 +12,11 @@ const server = new ApolloServer({
     resolvers,
     introspection: true,
     playground: true,
-    context: ({ req, res }) => ({ req, res }),
+    context: ({ req, res }) => { 
+        const user = req.user;
+        const isAuth = req.isAuth
+        return {user, isAuth};
+    },
 });
 
 const app = express();

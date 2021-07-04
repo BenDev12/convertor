@@ -1,6 +1,7 @@
 import config from '@config'
-const RateLimit = require('express-rate-limit');
-const RedisStore = require('rate-limit-redis');
+import  RateLimit from'express-rate-limit';
+import RedisStore from 'rate-limit-redis';
+
 
 const Ratelimiter = new RateLimit({
     store: new RedisStore({ client: config.redis_url }),
