@@ -19,5 +19,5 @@ export default {
     staging: process.env.NODE_ENV === 'staging',
     redis_url: process.env.REDIS_URI || 'redis://127.0.0.1:6379',
     fixer_key: process.env.FIXER_ACCESS_KEY || 'API_KEY',
-    country_url: process.env.COUNTRY_URL || 'COUNTRY_URL',
+    country_url: process.env.COUNTRY_URL || 'https://restcountries.eu/rest/v2/name',
 };

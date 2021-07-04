@@ -23,7 +23,7 @@ const auths = async (req, res, next) => {
 
         req.isAuth = true;  
         req.userId = user;
-
+        // console.log(user)
         return next();
     } catch (error) {
         console.log(error);

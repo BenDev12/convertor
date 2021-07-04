@@ -39,8 +39,6 @@ export default {
 
         signIn: async (_, { email, password }) => {
 
-            console.log(email)
-            console.log(password)
             try {
                 const user = await User.findOne({ email: email });
                 if (!user) {

@@ -5,14 +5,18 @@ import cors from 'cors';
 import schema from '@graphql/schema';
 import resolvers from '@graphql/resolvers';
 import auths from '@middleware/auth'
-import Ratelimiter from '@utils/RateLimit'
+import Ratelimiter from '@utils/rateLimit'
 
 const server = new ApolloServer({
     typeDefs: schema,
     resolvers,
     introspection: true,
     playground: true,
-    context: ({ req, res }) => ({ req, res }),
+    context: ({ req, res }) => { 
+        const user = req.user;
+        const isAuth = req.isAuth
+        return {user, isAuth};
+    },
 });
 
 const app = express();
